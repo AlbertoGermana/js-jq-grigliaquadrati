@@ -33,17 +33,17 @@ $(document).ready(function(){   //a fine caricamento della pagina
         if($(this).hasClass('active')){ // se l'elemento cliccato ha la classe .active
           alert("Puoi scegliere solo un quadrato bianco");  // messaggio
         } else if($(this).hasClass('redWannabe')){  //se non ha classe .active e se ha classe .redWannabe
-          $(this).css('background', 'red'); // aggiungi classe .active
+          $(this).css('background', 'rgb(167, 71, 70)'); // aggiungi classe .active
           redPoint++; // aggiungi classe .active
           $(this).addClass('active'); // aggiungi classe .active
           /* console.log("punteggio rosso: " + redPoint);   */
-          $('.prossa').html("punteggio rosso: " + redPoint); // scrivo nell'html punteggio
+          $('.prossa').html("Quadrati rossi: " + "<span>" + redPoint + "</span>"); // scrivo nell'html punteggio
         } else {
-          $(this).css('background', 'green'); // aggiungi classe .active
+          $(this).css('background', '#43BF85'); // aggiungi classe .active
           greenPoint++; // aggiungi classe .active
           $(this).addClass('active'); // aggiungi classe .active
           /* console.log("punteggio verde: " + greenPoint); */
-          $('.pverde').html("punteggio verde: " + greenPoint); // scrivo nell'html punteggio
+          $('.pverde').html("Quadrati verdi: " + "<span>" + greenPoint + "</span>"); // scrivo nell'html punteggio
         }
       }
     );
