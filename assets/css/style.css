@@ -62,10 +62,26 @@ body{
     margin: 2px;
     box-shadow: #1D3340 1px 1px 4px;
 }
-.square:hover{
+.square:hover,
+.reset:hover{
     background-color: #68BAE6;
     opacity: 0.5;
 }
-.square:active{
+.square:active,
+.reset:active{
     box-shadow: #1D3340 1px 1px 4px inset;
+}
+.reset{
+    border-radius: 10px;
+    background-color: #68BAE6;
+    color: #396780;
+    font-size: 1.5em;
+    border: 1px solid #1D3340;
+    width: 80px;
+    height: 55px;
+    margin: 12px;
+    box-shadow: #1D3340 1px 1px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -3,6 +3,16 @@
 
 $(document).ready(function(){   //a fine caricamento della pagina
 
+  newGame(); // avvio la funzione di gioco al caricamento della pagina
+
+  $('.reset').click(newGame); // se clicco il tasto reset si riavvia la funzione di gioco
+
+  function newGame(){
+    //reset delle variabili di gioco e dell'html
+    $('.tableContainer').html('');
+    $('.prossa').html("Quadrati rossi: " + "<span>" + 0 + "</span>");
+    $('.pverde').html("Quadrati rossi: " + "<span>" + 0 + "</span>");
+
     // creo 64 quadrati con classe "square"
     for(var i = 0; i < 64; i++){
         $('.tableContainer').append('<div class="square"></div>');
@@ -24,14 +34,12 @@ $(document).ready(function(){   //a fine caricamento della pagina
             quantiRandom++; //aumento di 1 il contatore
         }
     }while(quantiRandom <= 15)
-
   
     // tenere il punteggio dei Verdi VS Rossi
   var redPoint = 0, greenPoint = 0;
     $('.square').click(  //al click
       function () {
-        if($(this).hasClass('active')){ // se l'elemento cliccato ha la classe .active
-          alert("Puoi scegliere solo un quadrato bianco");  // messaggio
+        if($(this).hasClass('active')){ // se l'elemento cliccato ha la classe .active      
         } else if($(this).hasClass('redWannabe')){  //se non ha classe .active e se ha classe .redWannabe
           $(this).css('background', 'rgb(167, 71, 70)'); // aggiungi classe .active
           redPoint++; // aggiungi classe .active
@@ -47,5 +55,8 @@ $(document).ready(function(){   //a fine caricamento della pagina
         }
       }
     );
-   
+  }
+
+
+  
   });
