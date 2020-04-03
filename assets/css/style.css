@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .punteggio{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tableContainer{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .square {
+    border:  1px solid black;
+    width: calc(100% / 8);
+    height: calc(100% / 8);
+  }
